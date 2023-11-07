@@ -1,0 +1,19 @@
+.primary {
+    border-radius: 3px;
+    background-color: transparent;
+    border-bottom: 3px solid #1f2032;
+    text-transform: capitalize;
+}
+
+.primary > a > svg {
+    transition: all .3s ease-in;
+}
+
+.primary:hover > a > svg {
+    transform: translateX(5px);
+}
+
+.primary:active {
+    margin-top: 3px;
+    border: none;
+}

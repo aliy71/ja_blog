@@ -1,0 +1,13 @@
+.list a {
+    padding: 7.5px 15px;
+    transition: translatey .3s ease;
+}
+
+.list.active a,
+.list:hover a {
+    border-bottom: 3px solid #000;
+}
+
+.list.active a {
+    transform: translateY(5px);
+}

@@ -1,0 +1,15 @@
+.navbar {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+
+.list {
+    border-bottom: 3px solid transparent;
+    height: 100%;
+}
+
+
+

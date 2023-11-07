@@ -1,0 +1,23 @@
+.quotes {
+    /* height: 60vh; */
+    padding: 3rem 0;
+}
+
+.box {
+    width: 50%;
+    padding: 2rem;
+    border: 1px solid #1f20325b;
+    border-radius: 3px;
+    flex-wrap: nowrap;
+}
+
+.box__field {
+    width: 100%;
+    position: relative;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+}

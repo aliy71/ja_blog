@@ -1,0 +1,18 @@
+nav,
+main {
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  border-bottom: 1px solid #eff9fc;
+  background: #fff;
+  z-index: 999;
+}
+
+main {
+  margin-top: 10vh;
+  height: 100%;
+}

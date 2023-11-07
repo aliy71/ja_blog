@@ -1,0 +1,34 @@
+.box {
+    width: 375px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.box:hover {
+    border-color: #1f20325b;
+}
+
+.box:hover img {
+    scale: 1.1;
+}
+
+.image {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    filter:grayscale(.75);
+    overflow: hidden;
+}
+
+.box:hover .image {
+    filter: none;
+}
+
+.image img {
+    /* mix-blend-mode:lighten; */
+}
+
+.information {
+    padding: 5px 0;
+}

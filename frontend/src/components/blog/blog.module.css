@@ -1,0 +1,9 @@
+.blog__field {
+    justify-content: start;
+    padding: 2rem ;
+}
+
+.blog__field > .field {
+    flex-wrap: wrap;
+    gap: 10px;
+}
