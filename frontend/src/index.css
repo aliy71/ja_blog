@@ -53,6 +53,7 @@ a {
 }
 
 .container {
+  position: relative;
   max-width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -90,6 +91,9 @@ pre {
 }
 
 .btn_group {
-  width: 10%;
+  width: 20%;
   text-align: end;
+  justify-content: end;
+  gap: 5px;
+  height: 100%;
 }

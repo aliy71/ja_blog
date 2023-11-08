@@ -6,6 +6,7 @@ import './App.css'
 import { useEffect, useState } from 'react';
 import { NavbarActiveContext, IsLikeContext, BlogDataContext } from '../context/mainContext';
 import { blogData } from '../constants/blogData';
+import SignUp from '../views/signUp/signUp';
 
 const App = () => {
   const [linkActive, setLinkActive] = useState('home')
@@ -44,6 +45,7 @@ const App = () => {
             <Route path='/blogs' element={<Blogs />}></Route>
             <Route path='/blog-detail/:id' element={<BlogDetail />}></Route>
             <Route path='/sign-in' element={<SignIn />}></Route>
+            <Route path='/sign-up' element={<SignUp />}></Route>
           </Routes>
         </main>
       </BlogDataContext.Provider>

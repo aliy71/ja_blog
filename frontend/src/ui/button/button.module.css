@@ -13,13 +13,16 @@
     transform: translateX(5px);
 }
 
-.primary:active {
+:where(.primary, .secondary):active{
     margin-top: 3px;
     border: none;
 }
 
 .secondary {
     background-color: #1f2032;
+    border-bottom: 3px solid #1f2032;
+    border-radius: 3px;
+    text-transform: capitalize;
 }
 
 .secondary > a {
@@ -27,10 +30,10 @@
 }
 
 .secondary > a > span{
-    display: inline-block;
+    display: none;
     transition: all .5s ease-in-out;
 }
 
 .secondary:hover > a > span {
-    display: none;
+    display: inline-block;  
 }

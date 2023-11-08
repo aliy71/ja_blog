@@ -1,0 +1,23 @@
+.input__field {
+    width: 100%;
+    border-bottom: 1px solid #eff9fc;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+.input__field label {
+    font-size: .65rem;
+    text-transform: capitalize;
+}
+
+.input__field input {
+    width: 95%;
+    padding: 7.5px 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input__field input:focus label{
+    transform: rotateX(5px);
+}
