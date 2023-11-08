@@ -89,3 +89,7 @@ pre {
   text-transform: uppercase;
 }
 
+.btn_group {
+  width: 10%;
+  text-align: end;
+}

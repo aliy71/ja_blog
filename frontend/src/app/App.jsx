@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { BlogDetail, Blogs, Home } from '../views';
+import { BlogDetail, Blogs, Home, SignIn } from '../views';
 import Navbar from '../components/navbar/navbar';
 
 import './App.css'
@@ -43,6 +43,7 @@ const App = () => {
             <Route path='/' element={<Home />}></Route>
             <Route path='/blogs' element={<Blogs />}></Route>
             <Route path='/blog-detail/:id' element={<BlogDetail />}></Route>
+            <Route path='/sign-in' element={<SignIn />}></Route>
           </Routes>
         </main>
       </BlogDataContext.Provider>

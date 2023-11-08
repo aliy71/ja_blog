@@ -17,3 +17,20 @@
     margin-top: 3px;
     border: none;
 }
+
+.secondary {
+    background-color: #1f2032;
+}
+
+.secondary > a {
+    color: #fff;
+}
+
+.secondary > a > span{
+    display: inline-block;
+    transition: all .5s ease-in-out;
+}
+
+.secondary:hover > a > span {
+    display: none;
+}

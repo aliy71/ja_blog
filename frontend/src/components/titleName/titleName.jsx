@@ -14,7 +14,7 @@ const TitleName = ({ title }) => {
                     <GiNotebook size={'24px'} color="#1f2032" />
                 </h3>
                 <div className="btn_group">
-                    <Button title={'view all'} icon={<FaChevronRight />} type={'primary'} />
+                    <Button title={'view all'} icon={<FaChevronRight />} type={'primary'} link={'blogs'} />
                 </div>
             </div>
         </div>

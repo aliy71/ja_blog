@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import { MdAdminPanelSettings } from 'react-icons/md'
 import SocialMedia from "../social_media/socialMedia";
 import socialMediaLinks from "../../constants/socialMedia";
 
 import style from './navbar.module.css'
 import navbarLinks from "../../constants/navbarLink";
 import NavLink from "./navLink/navLink";
+import Button from "../../ui/button/button";
+
 
 const Navbar = () => {
     return (
@@ -17,6 +20,9 @@ const Navbar = () => {
                     }
                 </ul>
                 <SocialMedia s_media={socialMediaLinks} />
+                <div className="btn_group">
+                    <Button title={'sign-in'} type={'secondry'} icon={<MdAdminPanelSettings size={'20px'}/>} link={'sign-in'}/>
+                </div>
             </div>
         </div>
     );
