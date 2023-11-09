@@ -19,7 +19,7 @@ const Navbar = () => {
                         navbarLinks.map(link => <NavLink title={link.title} key={link.id} path={link.path} icon={link.icon} />)
                     }
                 </ul>
-                <SocialMedia s_media={socialMediaLinks} />
+                <SocialMedia />
                 <div className="btn_group field">
                     <Button title={'sign-in'} type={'secondry'} icon={<MdAdminPanelSettings size={'20px'}/>} link={'sign-in'}/>
                     <Button title={'sign-up'} type={'primary'} icon={<MdSecurity size={'20px'}/>} link={'sign-up'}/>

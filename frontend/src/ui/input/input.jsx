@@ -1,6 +1,6 @@
 import styles from './input.module.css'
 
-const Input = ({ type, title, changeHandlerFn }) => {
+const Input = ({ type = 'text', title, changeHandlerFn }) => {
     return ( 
         <div className={styles.input__field}>
             <label htmlFor={title}>{title}</label>

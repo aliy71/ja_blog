@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import style from './button.module.css'
 
-const Button = ({ title, icon, type, link, clickHandlerFn }) => {
+const Button = ({ title, icon, type, link, disabled=false, clickHandlerFn }) => {
     return (
-        <button className={`btn ${ type === 'primary' ? style.primary : style.secondary}`} onClick={clickHandlerFn}>
+        <button disabled={disabled} className={`btn ${ type === 'primary' ? style.primary : style.secondary}`} onClick={clickHandlerFn}>
             {
                 link ? (
                     <Link to={`/${link}`} style={{ display: 'flex', alignItems: 'center', padding: '.5rem 1rem' }} >

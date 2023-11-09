@@ -4,20 +4,36 @@
 }
 
 .box {
+    position: relative;
     width: 50%;
+    max-width: 650px;
     padding: 2rem;
     border: 1px solid #1f20325b;
     border-radius: 3px;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .box__field {
-    width: 100%;
     position: relative;
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 100% !important;
+    height: 100%;
+    /* margin-right: 2rem; */
 }
 
 .text {
     font-weight: 300;
     font-size: 1rem;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+}
+
+.controller {
+    position: absolute;
+    width: 90%;
+    bottom: -20px;    
 }

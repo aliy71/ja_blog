@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { BlogDetail, Blogs, Home, SignIn } from '../views';
+import { Admin, BlogDetail, Blogs, Home, SignIn } from '../views';
 import Navbar from '../components/navbar/navbar';
 
 import './App.css'
@@ -7,12 +7,13 @@ import { useEffect, useState } from 'react';
 import { NavbarActiveContext, IsLikeContext, BlogDataContext } from '../context/mainContext';
 import { blogData } from '../constants/blogData';
 import SignUp from '../views/signUp/signUp';
+import { Footer } from '../components';
 
 const App = () => {
   const [linkActive, setLinkActive] = useState('home')
   const [data, SetData] = useState([])
   const routeLink = useLocation()
-
+  console.log(routeLink.pathname)
   const setLinkActiveHandler = link => {
     setLinkActive(link)
   }
@@ -22,14 +23,12 @@ const App = () => {
 
   const ChangeDataHandler = (data) => {
     SetData(data)
-    console.log(data);
   }
 
   useEffect(() => {
     ChangeDataHandler(blogData)
   }, [])
 
-  console.log(data);
   
   return (
     <>
@@ -46,8 +45,12 @@ const App = () => {
             <Route path='/blog-detail/:id' element={<BlogDetail />}></Route>
             <Route path='/sign-in' element={<SignIn />}></Route>
             <Route path='/sign-up' element={<SignUp />}></Route>
+            <Route path='/admin' element={<Admin />}></Route>
           </Routes>
         </main>
+        {
+          (routeLink.pathname === '/sign-in' || routeLink.pathname === '/sign-up' ) ? '' : <Footer />
+        }
       </BlogDataContext.Provider>
     </>
   );
