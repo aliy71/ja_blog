@@ -9,7 +9,9 @@ app.use(cors())
 // app.use(express(extend))
 
 const DB_KEY = process.env.DB_KEY
-mongoose.connect(`mongodb+srv://aliy:${DB_KEY}@cluster0.smerzqk.mongodb.net/blogs?retryWrites=true&w=majority`)
+const connecting = (link='blogs') => {
+    mongoose.connect(`mongodb+srv://aliy:${DB_KEY}@cluster0.smerzqk.mongodb.net/${link}?retryWrites=true&w=majority`)
+}
 
 const dataSchema = {
     author: String,
@@ -36,7 +38,16 @@ const dataSchema = {
     ]
 }
 
+const userSchema = {
+    name: String,
+    email: String,
+    password: String,
+    confirmPassword: String
+}
+
 const Blogs = mongoose.model('blogs', dataSchema)
+
+const Users = mongoose.model('user', userSchema)
 
 app.get('/', (req, res) => {
     Blogs.find()
@@ -44,9 +55,27 @@ app.get('/', (req, res) => {
         .catch(err => res.status(400).json(err))
 })
 
-app.post('/sign-up', (req, res) => {
+app.get('sign-in', (req, res) => {
+    Users.find()
+    .then(user => res.json(user))
+    .catch(err => res.status(400).json(err))
+})
+
+app.post('http://localhost:5000/sign-up', (req, res) => {
     const routeLink = req.route.path.slice(1)
-    
+    console.log(req.body);
+    connecting(routeLink)
+
+    const newUser = new Users({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        confirmPassword: req.body.confirmPassword
+    })
+
+    newUser.save()
+        .then(user => console.log(user))
+        .catch(err => res.status(400).json(err))
 })
 
 app.listen(PORT, () => console.log(`server has been started on ${PORT} port`))

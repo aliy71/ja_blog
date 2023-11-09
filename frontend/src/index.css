@@ -24,6 +24,7 @@ code {
   border: none;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
   transition: all .3s ease;
 }
 
