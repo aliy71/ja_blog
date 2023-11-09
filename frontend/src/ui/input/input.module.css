@@ -6,7 +6,7 @@
 }
 
 .input__field label {
-    font-size: .65rem;
+    font-size: .75rem;
     text-transform: capitalize;
 }
 
@@ -16,8 +16,4 @@
     border: none;
     outline: none;
     font-size: 1rem;
-}
-
-.input__field input:focus label{
-    transform: rotateX(5px);
 }

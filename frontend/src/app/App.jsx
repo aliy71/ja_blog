@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useResolvedPath } from 'react-router-dom'
 import { Admin, BlogDetail, Blogs, Home, SignIn } from '../views';
 import Navbar from '../components/navbar/navbar';
 
@@ -12,30 +12,24 @@ import { Footer } from '../components';
 const App = () => {
   const [linkActive, setLinkActive] = useState('home')
   const [data, SetData] = useState([])
-  const routeLink = useLocation()
-  console.log(routeLink.pathname)
-  const setLinkActiveHandler = link => {
-    setLinkActive(link)
-  }
+  const routeLink = useResolvedPath()
+
   useEffect(() => {
+  }, [routeLink.pathname])
+  
+  useEffect(() => {
+    SetData([...blogData])
     setLinkActive(routeLink.pathname)
   }, [routeLink.pathname])
 
-  const ChangeDataHandler = (data) => {
-    SetData(data)
-  }
+  console.log(data);
 
-  useEffect(() => {
-    ChangeDataHandler(blogData)
-  }, [])
-
-  
   return (
     <>
-      <BlogDataContext.Provider value={{ data, ChangeDataHandler }}>
+      <BlogDataContext.Provider value={{ data, SetData }}>
         <nav>
-          <NavbarActiveContext.Provider value={{ linkActive, setLinkActiveHandler }}>
-            <Navbar setLinkActiveHandler={setLinkActiveHandler} />
+          <NavbarActiveContext.Provider value={{ linkActive}}>
+            <Navbar />
           </NavbarActiveContext.Provider>
         </nav>
         <main>

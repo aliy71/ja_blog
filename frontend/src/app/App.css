@@ -14,5 +14,5 @@ nav {
 
 main {
   margin-top: 10vh;
-  height: 100%;
+  min-height: 90vh;
 }

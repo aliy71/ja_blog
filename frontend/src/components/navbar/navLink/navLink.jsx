@@ -7,12 +7,9 @@ import { NavbarActiveContext } from "../../../context/mainContext";
 const NavLink = ({title, path, icon}) => {
     const { linkActive, setLinkActiveHandler } = useContext(NavbarActiveContext)
     return (
-        <li 
-            className={`${style.list} ${linkActive === path ? style.active : ''}`} 
-            onClick={() => setLinkActiveHandler(path)} 
-        >
+        <li className={`${style.list} ${linkActive === path ? style.active : ''}`}  >
             <Link to={path}>{title}</Link>
-            {icon}
+            {icon}  
         </li>
     );
 }

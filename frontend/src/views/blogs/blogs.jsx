@@ -3,16 +3,26 @@ import { Blog } from "../../components";
 import { GoSearch } from 'react-icons/go';
 import { useContext, useEffect, useState } from 'react';
 import { BlogDataContext } from '../../context/mainContext';
+import { useLocation, useNavigate, useNavigation, useParams } from 'react-router-dom';
+import { Button, Input } from '../../ui';
 
 
 const Blogs = () => {
+    const { data } = useContext(BlogDataContext)
     const [search, setSearch] = useState('')
     const [searchData, setSearchData] = useState([])
-    const { data } = useContext(BlogDataContext)
     
+    useEffect(() => {
+        setSearchData([...data])
+    }, [data])
+
     const submitHandler = (e) => {
         e.preventDefault()
-        setSearchData(data.filter(blog => blog.title.toLowerCase().indexOf(search.toLowerCase().trim()) != -1 && blog ))
+        search.trim().length != 0 ? ( 
+            setSearchData(data.filter(blog => blog.title.toLowerCase().indexOf(search.toLowerCase().trim()) != -1 && blog))
+        ) : (
+            setSearchData([...data])
+        )    
         setSearch('')
     }
 
@@ -21,18 +31,12 @@ const Blogs = () => {
             <div className="container">
                 <div className={stl.search__panel}>
                     <div className={`field`}>
-                        <form className={`field ${stl.form__group}`} onSubmit={submitHandler}>
-                            <input 
-                                type="text" 
-                                placeholder='searching...' 
-                                value={search}
-                                onChange={(e) => {
-                                    setSearch(e.target.value)
-                                }} 
-                            />
-                            <span className="icon" style={{width: '50px', height: '45px'}}>
+                        <form className={`field ${stl.form__group}`} onSubmit={submitHandler} >
+                            <Input title={'seaching'} changeHandlerFn={setSearch} />
+                            <Button icon={ <GoSearch size={'24px'} />} type={'btn icon__btn'}  clickHandlerFn={submitHandler}/>
+                            {/* <span className="icon" style={{ width: '50px', height: '45px' }} onClick={submitHandler}>
                                 <GoSearch size={'24px'} />
-                            </span>
+                            </span> */}
                         </form>
                         <div className="select-style">
                             <select >
@@ -43,7 +47,7 @@ const Blogs = () => {
                         </div>
                     </div>
                 </div>
-                <Blog />
+                <Blog data={searchData} />
             </div>
         </section>
     );
