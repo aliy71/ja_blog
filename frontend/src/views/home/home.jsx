@@ -9,7 +9,7 @@ const Home = () => {
     return ( 
         <section className={style.home}>
             <div className="container">
-                <Quotes />
+                {/* <Quotes /> */}
                 <div className="blog_field">
                     <TitleName title={'JA_blogs'} />
                     <Blog data={data} />

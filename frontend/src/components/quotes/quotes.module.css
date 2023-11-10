@@ -7,7 +7,8 @@
     position: relative;
     width: 50%;
     max-width: 650px;
-    padding: 2rem;
+    min-height: 120px;
+    padding: 1rem 0rem;
     border: 1px solid #1f20325b;
     border-radius: 3px;
     display: flex;
@@ -29,7 +30,6 @@
 .text {
     font-weight: 300;
     font-size: 1rem;
-    margin: 1rem 0 1rem 0;
 }
 
 .controller {
