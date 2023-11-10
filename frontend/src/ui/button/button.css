@@ -45,26 +45,37 @@
 .icon__btn {
     width: 40px;
     height: 40px;
-    /* padding: 0; */
-    /* padding-top: 2.5px; */
-    padding: .1rem 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     border-radius: 3px;
-    transition: all .3s ease;
-    background-color: #1f2032;
-    border: 1px solid transparent;
-    color: #fff;
     transition: all .3s ease-in-out;
 }
 
-.icon__btn > span {
+.icon__btn__secondary {
+    padding: .1rem 0px;
+    background-color: #1f2032;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.icon__btn__secondary > span {
     margin: 0 !important;
 }
 
-.icon__btn:hover {
+.icon__btn__secondary:hover {
     color: #1f2032;
     background-color: transparent;
     border-color: #1f2032;
+}
+
+.icon__btn__primary {
+    background-color: transparent;
+    color: #1f2032;
+}
+
+.icon__btn__primary:hover {
+    color: #fff;
+    background-color: #1f2032;
 }

@@ -33,7 +33,7 @@ const Blogs = () => {
                     <div className={`field`}>
                         <form className={`field ${stl.form__group}`} onSubmit={submitHandler} >
                             <Input title={'seaching'} changeHandlerFn={setSearch} />
-                            <Button icon={ <GoSearch size={'24px'} />} type={'btn icon__btn'}  clickHandlerFn={submitHandler}/>
+                            <Button icon={<GoSearch size={'24px'} />} type={'icon__btn icon__btn__secondary'} clickHandlerFn={submitHandler} />
                             {/* <span className="icon" style={{ width: '50px', height: '45px' }} onClick={submitHandler}>
                                 <GoSearch size={'24px'} />
                             </span> */}

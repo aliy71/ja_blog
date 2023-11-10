@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
-import style from './button.module.css'
+import style from './button.css'
 
 const Button = ({ title, icon, type, link, disabled=false, clickHandlerFn }) => {
     return (
         <button 
             disabled={disabled} 
-            className={`btn 
-                ${ type === 'primary' ? style.primary : type === 'secondary' ? style.secondary : style.icon__btn }
-            `} 
+            className={`btn ${type} `} 
             onClick={clickHandlerFn}>
             {
                 link ? (
