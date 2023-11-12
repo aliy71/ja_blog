@@ -77,7 +77,7 @@ const Admin = () => {
                             <Button title={'start blog'} type={'primary'} icon={<LuAlignHorizontalJustifyStart size={'20px'} />} />
                         </form>
                     </div>
-                    <div className={styles.admin__blog__main}>
+                    {/* <div className={styles.admin__blog__main}>
                         <form >
                             <Input title={'title'} changeHandlerFn={''} />
                             <Input title={'text'} changeHandlerFn={''} />
@@ -85,7 +85,7 @@ const Admin = () => {
                             <Input title={'file'} type="file" changeHandlerFn={''} />
                         </form>
                         <Button title={'add blog'} type={'primary'} icon={<MdOutlineAddChart size={'20px'} />} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

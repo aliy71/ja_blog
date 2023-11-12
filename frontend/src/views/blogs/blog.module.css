@@ -26,3 +26,15 @@
     border: none;
     outline: none;
 }
+
+.select__option {
+    border: none;
+    padding: .5rem 7.5px;
+    border-bottom: 1px solid #eff9fc ;
+    outline: none;
+}
+
+.select__option option {
+    padding: 5px 7.5px;
+    border-bottom: 1px solid #eff9fc;
+}

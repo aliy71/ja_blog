@@ -39,7 +39,7 @@ const Blogs = () => {
                             </span> */}
                         </form>
                         <div className="select-style">
-                            <select >
+                            <select className={stl.select__option} >
                                 <option value="all_blogs">All_blogs</option>
                                 <option value="ja_blogs">JA_blogs</option>
                                 <option value="world_blogs">World_blogs</option>

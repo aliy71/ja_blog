@@ -14,6 +14,7 @@
 }
 
 .image {
+    position: relative;
     width: 100%;
     height: 250px;
     border-radius: 5px;
@@ -31,4 +32,21 @@
 
 .information {
     padding: 5px 0;
+}
+
+.image__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f20325b;
+    transition: all .3s linear;
+}
+
+.image:hover .image__option {
+    top: 0;
 }

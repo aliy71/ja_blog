@@ -1,0 +1,12 @@
+.scroll__to__top {
+    opacity: 0;
+    position: fixed;
+    bottom: 8.5%;
+    right: 2.5%;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
