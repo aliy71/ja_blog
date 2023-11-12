@@ -21,32 +21,43 @@ const BlogDetail = () => {
     return ( 
         <section className={styles.blog__details__field}>
             <div className="container">
-                <h2 className="field" style={{ fontSize: '2.8rem' }}>
-                    {catchData[0]?.title}
-                    {
-                        catchData[0]?.isLike ? <FaHeart color="crimson" /> : ''
-                    }
-                </h2>
-                <p className={styles.text}>{catchData[0]?.description}</p>
-                <div className={styles.tags}>
-                    <Tags tags={catchData[0]?.tag} />
+                <div className="field" style={{ gap: '10px', alignItems: 'start' }}>
+                    <article style={{ width: '70%', padding: '0 1rem' }}>
+                        <h2 className="field" style={{ fontSize: '2.4rem' }}>
+                            <span>
+                                {catchData[0]?.title}
+                            </span>
+                            <span style={{ color: catchData[0]?.isLike ? 'crimson' : '#1f2032' }}>
+                                {
+                                    catchData[0]?.isLike ? 'Like' : 'DisLike'
+                                }
+                            </span>
+                        </h2>
+                        <p className={styles.text}>{catchData[0]?.description}</p>
+                        <div className={styles.tags}>
+                            <Tags tags={catchData[0]?.tag} />
+                        </div>
+                        {
+                            catchData[0]?.thumbnails?.main?.map(data => {
+                                console.log(data);
+                                return (
+                                    <div className={styles.blog}>
+                                        <h5>{data?.title}</h5>
+                                        <p className={styles.text}>{data?.text}</p>
+                                        <div className={styles.image}>
+                                            <img src={data.image.src} alt="image" loading="lazy" />
+                                        </div>
+                                        <Notes data={data.notes} />
+                                        <p className={styles.text}>{data.end_text}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </article>
+                    <aside style={{ width: '30%' }}>
+                        somethings
+                    </aside>
                 </div>
-                {
-                    catchData[0]?.thumbnails?.main?.map(data => {
-                        console.log(data);
-                        return (
-                            <div className={styles.blog}>
-                                <h5>{data?.title}</h5>
-                                <p className={styles.text}>{data?.text}</p>
-                                <div className={styles.image}>
-                                    <img src={data.image.src} alt="image" loading="lazy" />
-                                </div>
-                                <Notes data={data.notes} />
-                                <p className={styles.text}>{data.end_text}</p>
-                            </div>
-                        )
-                    })
-                }
             </div>
         </section>
      );

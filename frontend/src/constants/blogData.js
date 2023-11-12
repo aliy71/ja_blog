@@ -2,7 +2,7 @@ export const blogData = [
     {
         id: '1_',
         title: "JavaScript",
-        tag: ['javascript', 'react Js'],
+        tag: ['javascript', 'react Js', 'node Js', 'Java', 'Spring', 'Wordpress'],
         description: "Once JavaScript is wonderful Programming language",
         image: {
             alt: 'js image',
