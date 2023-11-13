@@ -5,6 +5,7 @@ import { BlogDataContext } from "../../context/mainContext";
 import styles from './blogDetail.module.css'
 import { Notes, Tags } from "../../components";
 import { FaHeart } from "react-icons/fa";
+import OtherBlogs from "../../components/otherBlogs/otherBlogs";
 
 const BlogDetail = () => {
     const {data} = useContext(BlogDataContext)
@@ -16,13 +17,13 @@ const BlogDetail = () => {
 
     useEffect(() => {
         setCatchData(data.filter(blog => blog.id === routeRef.current))
-    }, [routeParam])    
+    }, [routeParam])
 
     return ( 
         <section className={styles.blog__details__field}>
             <div className="container">
                 <div className="field" style={{ gap: '10px', alignItems: 'start' }}>
-                    <article style={{ width: '70%', padding: '0 1rem' }}>
+                    <article style={{ width: '80%', padding: '0 1rem' }}>
                         <h2 className="field" style={{ fontSize: '2.4rem' }}>
                             <span>
                                 {catchData[0]?.title}
@@ -54,8 +55,9 @@ const BlogDetail = () => {
                             })
                         }
                     </article>
-                    <aside style={{ width: '30%' }}>
-                        somethings
+                    <aside style={{ width: '20%' }}>
+                        <h3>Other Blogs</h3>
+                        <OtherBlogs blog={data} />
                     </aside>
                 </div>
             </div>
