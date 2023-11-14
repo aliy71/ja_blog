@@ -8,7 +8,7 @@ import { FaHeart } from "react-icons/fa";
 import OtherBlogs from "../../components/otherBlogs/otherBlogs";
 
 const BlogDetail = () => {
-    const {data} = useContext(BlogDataContext)
+    const { data } = useContext(BlogDataContext)
     const [catchData, setCatchData] = useState([])
     const routeParam = useParams()
     const routeLocation = useLocation()
@@ -16,10 +16,11 @@ const BlogDetail = () => {
     routeRef.current = routeLocation.pathname.slice(routeLocation.pathname.lastIndexOf('/') + 1)
 
     useEffect(() => {
+        console.log(data);
+
         setCatchData(data.filter(blog => blog.id === routeRef.current))
     }, [routeParam])
-
-    return ( 
+    return (
         <section className={styles.blog__details__field}>
             <div className="container">
                 <div className="field" style={{ gap: '10px', alignItems: 'start' }}>
@@ -40,7 +41,6 @@ const BlogDetail = () => {
                         </div>
                         {
                             catchData[0]?.thumbnails?.main?.map(data => {
-                                console.log(data);
                                 return (
                                     <div className={styles.blog}>
                                         <h5>{data?.title}</h5>

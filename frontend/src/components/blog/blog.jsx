@@ -13,11 +13,7 @@ const Blog = ({ data }) => {
             <div className={`field ${blogStyle.field}`}>
                 {
                     data.length > 0 ? (
-                        data?.map(blog => {
-                            return (
-                                <BlogItem key={blog.id} data={blog} />
-                            )
-                        })
+                        <BlogItem blog={data} />
                     ) : (
                         <p style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
                             {/* <span style={{fontSize: '1.6rem'}}>Ma'lumot topilmadi.</span> */}

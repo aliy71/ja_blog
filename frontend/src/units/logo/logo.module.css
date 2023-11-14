@@ -1,11 +1,12 @@
 .logo {
     font-size: 3.2rem;
+    width: 20%;
     font-family: monospace;
 }
 
 .logo a {
     position: relative;
-    color: #000;
+    color: #1f2032;
 }
 
 .logo a span {
