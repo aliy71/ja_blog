@@ -12,7 +12,7 @@ const Home = () => {
                 {/* <Quotes /> */}
                 <div className="blog_field">
                     <TitleName title={'JA_blogs'} />
-                    <Blog data={data} />
+                    <Blog blog={data} />
                 </div>
             </div>
         </section>

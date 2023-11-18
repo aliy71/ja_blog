@@ -347,4 +347,4 @@ export const blogData = [
         },
         isLike: false,
     },
-]
+];

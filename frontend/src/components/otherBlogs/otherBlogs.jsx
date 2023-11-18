@@ -9,7 +9,7 @@ const OtherBlogs = ({ blog }) => {
             {
                 blog.map(data => {
                     return (
-                        <li className={stl.other__blog__list__item}>
+                        <li className={stl.other__blog__list__item} key={blog.id}>
                             <span>{<ImBlog />}</span>
                             <Link to={`/blog-detail/${data?.id}`} >{data.title}</Link>
                         </li>

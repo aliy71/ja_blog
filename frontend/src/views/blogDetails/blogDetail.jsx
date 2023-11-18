@@ -16,10 +16,9 @@ const BlogDetail = () => {
     routeRef.current = routeLocation.pathname.slice(routeLocation.pathname.lastIndexOf('/') + 1)
 
     useEffect(() => {
-        console.log(data);
-
         setCatchData(data.filter(blog => blog.id === routeRef.current))
     }, [routeParam])
+
     return (
         <section className={styles.blog__details__field}>
             <div className="container">
@@ -29,11 +28,11 @@ const BlogDetail = () => {
                             <span>
                                 {catchData[0]?.title}
                             </span>
-                            <span style={{ color: catchData[0]?.isLike ? 'crimson' : '#1f2032' }}>
+                            {/* <span style={{ color: catchData[0]?.isLike ? 'crimson' : '#1f2032' }}>
                                 {
                                     catchData[0]?.isLike ? 'Like' : 'DisLike'
                                 }
-                            </span>
+                            </span> */}
                         </h2>
                         <p className={styles.text}>{catchData[0]?.description}</p>
                         <div className={styles.tags}>
