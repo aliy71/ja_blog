@@ -1,20 +1,18 @@
-import { FaBlog, FaChevronRight } from "react-icons/fa";
-import { GiNotebook } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { FaChevronRight } from "react-icons/fa";
 import { Button } from "../../ui";
 
 import style from './titleName.module.css'
 
-const TitleName = ({ title }) => {
+const TitleName = ({ title, icon, path }) => {
     return ( 
         <div className={style.title__field}>
             <div className="field">
                 <h3 className="field" style={{width: '10%'}}>
                     <span  style={{textTransform: 'capitalize'}}>{title}</span>
-                    <GiNotebook size={'24px'} color="#1f2032" />
+                    {icon}
                 </h3>
                 <div className="btn_group">
-                    <Button title={'view all'} icon={<FaChevronRight />} type={'primary'} link={'blogs'} />
+                    <Button title={'view all'} icon={<FaChevronRight />} type={'primary'} link={path} />
                 </div>
             </div>
         </div>

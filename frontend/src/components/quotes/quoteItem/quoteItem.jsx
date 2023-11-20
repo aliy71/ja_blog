@@ -1,7 +1,5 @@
 import quotes from '../quotes.module.css'
 
-import { useEffect, useState } from "react";
-
 const QuoteItem = ({ data, idx }) => {
     return (
         <div className={quotes.box__field}>

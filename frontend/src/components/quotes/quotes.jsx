@@ -1,51 +1,24 @@
-// import { Swiper, SwiperSlide } from 'swiper'
+import quotes from './quotes.module.css'
+import QuotesData from '../../constants/quotes';
+import QuoteItem from './quoteItem/quoteItem';
+import TitleName from '../titleName/titleName';
+import { LuQuote } from 'react-icons/lu';
 
-// import 'swiper/css';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
+const Quotes = () => {
+    return (
+        <div className={quotes.quotes}>
+            <TitleName title={'JA_Quotes'} icon={<LuQuote />} path={'quotes'} />
+            <div className="field" style={{ gap: '2rem', justifyContent: 'center' }}>
+                <div className={quotes.box}>
+                    {
+                        QuotesData.other.map((quote, idx) => {
+                            return <QuoteItem data={quote} key={quote.id} idx={idx} />
+                        })
+                    }
+                </div>
+            </div>
+        </div>
+    );
+}
 
-// import QuotesData from '../../constants/quotes';
-// import quotes from './quotes.module.css'
-// import QuoteItem from './quoteItem/quoteItem';
-
-// const Quotes = () => {
-//     return (
-//         <div className={quotes.quotes}>
-//             <div className="field" style={{ gap: '2rem' }}>
-//                 <Swiper
-//                     modules={[Navigation, Pagination, Scrollbar, A11y]}
-//                     spaceBetween={50}
-//                     slidesPerView={3}
-//                     navigation
-//                     pagination={{ clickable: true }}
-//                     scrollbar={{ draggable: true }}
-//                     onSwiper={(swiper) => console.log(swiper)}
-//                     onSlideChange={() => console.log('slide change')}
-//                 >
-//                     {
-//                         QuotesData.owner.map(quote => {
-//                             return (
-//                                 <SwiperSlide key={quote.id}>
-//                                     <QuoteItem data={quote} idx={quote.id} />
-//                                 </SwiperSlide>
-//                             )
-//                         })
-//                     }
-
-//                     ...
-//                 </Swiper>
-//                 <div className={quotes.box}>
-//                     {
-//                         QuotesData.other.map((quote, idx) => {
-//                             return <QuoteItem data={quote} key={quote.id} idx={idx} />
-//                         })
-//                     }
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Quotes;
+export default Quotes;
