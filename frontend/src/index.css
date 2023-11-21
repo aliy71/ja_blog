@@ -15,10 +15,16 @@
   background-color: #1f2032;
 }
 
+::selection {
+  background-color: #404275;
+  color: #fff;
+}
+
 #root {
   position: relative;
   width: 100%;
   height: 100%;
+  /* background-color: #11121b; */
 }
 
 body {

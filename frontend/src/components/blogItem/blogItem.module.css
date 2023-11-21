@@ -3,10 +3,12 @@
     border: 1px solid transparent;
     border-radius: 3px;
     padding: 5px;
+    background-color: #ffffff49;
 }
 
 .box:hover {
     border-color: #1f20325b;
+    background-color: #ffffff9a;
 }
 
 .box:hover img {
@@ -49,4 +51,8 @@
 
 .image:hover .image__option {
     top: 0;
+}
+
+.btn::selection {
+    background-color: transparent;
 }
