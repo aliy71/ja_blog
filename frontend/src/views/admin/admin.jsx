@@ -4,6 +4,8 @@ import { LuAlignHorizontalJustifyStart } from 'react-icons/lu'
 import { MdAddLink, MdOutlineAddChart } from 'react-icons/md';
 import { useReducer } from 'react';
 
+import axios from 'axios'
+
 const blogHeaderInit = {
     title: '',
     description: '',
@@ -27,7 +29,7 @@ const BlogHeaderReducer = (state, action) => {
         case 'BLOG_H_TAGS':
             return {
                 ...state,
-                tags: [...payload]
+                tags: [].push(payload)
             }
         case 'BLOG_H_IMAGE':
             return {
@@ -58,6 +60,9 @@ const Admin = () => {
     const startedBlog = (e) => {
         e.preventDefault()
         console.log(blogHeader);
+        axios.post('/admin', blogHeader)
+            .then(console.log('saved'))
+            .catch(console.log('has been err'))
     }
 
     return (
@@ -70,11 +75,15 @@ const Admin = () => {
                             <Input title={'title'}  changeHandlerFn={headTitleChangeHandler} />
                             <Input title={'description'} changeHandlerFn={headDescriptionChangeHandler} />
                             <div className='field'>
-                                <Input title={'tags'}  changeHandlerFn={headTagsChangeHandler} />
-                                <Button type={'primary'} icon={<MdAddLink style={{marginLeft: '-5px'}} size={'24px'} />} clickHandlerFn={''}/>
+                                <Input title={'tags'} changeHandlerFn={headTagsChangeHandler} />
                             </div>
                             <Input title={'image'} type='file' changeHandlerFn={headMainImageChangeHandler} />
-                            <Button title={'start blog'} type={'primary'} icon={<LuAlignHorizontalJustifyStart size={'20px'} />} />
+                            <Button
+                                title={'start blog'}
+                                type={'btn primary'}
+                                icon={<LuAlignHorizontalJustifyStart size={'20px'} />}
+                                clickHandlerFn={startedBlog}
+                            />
                         </form>
                     </div>
                     {/* <div className={styles.admin__blog__main}>
