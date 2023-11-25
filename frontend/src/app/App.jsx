@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation, useResolvedPath } from 'react-router-dom'
-import { Admin, BlogDetail, Blogs, Home, SignIn } from '../views';
+import { Admin, BlogDetail, Blogs, Home, SignIn, Templates } from '../views';
 import Navbar from '../components/navbar/navbar';
 import './App.css'
 import { useContext, useEffect, useRef, useState } from 'react';
@@ -63,6 +63,7 @@ const App = () => {
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/blogs' element={<Blogs />}></Route>
                 <Route path='/blog-detail/:id' element={<BlogDetail />}></Route>
+                <Route path='/template' element={<Templates />}></Route>
                 <Route path='/sign-in' element={<SignIn />}></Route>
                 <Route path='/sign-up' element={<SignUp />}></Route>
                 <Route path='/admin' element={<Admin />}></Route>
