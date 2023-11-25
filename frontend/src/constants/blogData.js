@@ -16,7 +16,7 @@ export const blogData = [
                     end_text: ``,
                     image: {
                         alt: '',
-                        src: 'https://imgs.search.brave.com/3L8pfo9-PHGikWzwhqiwCNZLtt1MVI9Svep1dfgdfNE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MzMzNTYxMjI1NDQt/ZjEzNDMyNGE2Y2Vl/P2l4bGliPXJiLTQu/MC4zJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4TVh4/OGNtVmhZM1FsTWpC/cWMzeGxibnd3Zkh3/d2ZIeDhNQT09Jnc9/MTAwMCZxPTgw',
+                        src: 'https://imgs.search.brave.com/M4C06UroQ0SyqRbVBa07PE-Ntctr3D1Ln8cV0ah9rhg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvMSp1S2JjWERC/eEVtdjNGeWJmTlhr/ZjRRLnBuZw',
                     },
                     notes: [
                         {
@@ -32,7 +32,7 @@ export const blogData = [
                     end_text: `Yuqoridagi yo'nalishlarda kod yozish uchun JavaScriptning bir qancha freamworklari hamda kutubxonalar mavjud. Bularga: ReactJS, VueJS, Angular, ElectronJS, ThreeJS, ExpressJs va hokazolar.`,
                     image: {
                         alt: '',
-                        src: 'https://imgs.search.brave.com/3L8pfo9-PHGikWzwhqiwCNZLtt1MVI9Svep1dfgdfNE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MzMzNTYxMjI1NDQt/ZjEzNDMyNGE2Y2Vl/P2l4bGliPXJiLTQu/MC4zJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4TVh4/OGNtVmhZM1FsTWpC/cWMzeGxibnd3Zkh3/d2ZIeDhNQT09Jnc9/MTAwMCZxPTgw',
+                        src: '/images/javaScript-skills.jpg',
                     },
                     notes: [
                         {
