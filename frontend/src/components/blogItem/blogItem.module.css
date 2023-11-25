@@ -4,6 +4,7 @@
     border-radius: 3px;
     padding: 5px;
     background-color: #ffffff49;
+    user-select: none;
 }
 
 .box:hover {
@@ -34,6 +35,10 @@
 
 .information {
     padding: 5px 0;
+}
+
+.box:hover .information a {
+    text-decoration: underline;
 }
 
 .image__option {

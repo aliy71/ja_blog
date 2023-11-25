@@ -5,11 +5,11 @@
     text-transform: capitalize;
 }
 
-.primary>a>svg {
-    transition: all .3s ease-in;
+.primary svg {
+    transition: all .1s ease-in;
 }
 
-.primary:hover>a>svg {
+.primary:hover svg {
     transform: translateX(5px);
 }
 
@@ -29,17 +29,21 @@
     text-transform: capitalize;
 }
 
-.secondary>a {
-    color: #fff;
+.secondary > a {
+    color: #fff !important;
 }
 
-.secondary>a>span {
+.secondary > a > span {
     display: none;
     transition: all .5s ease-in-out;
 }
 
-.secondary:hover>a>span {
+.secondary:hover > a > span {
     display: inline-block;
+}
+
+.secondary span {
+    color: #fff !important;
 }
 
 .icon__btn {

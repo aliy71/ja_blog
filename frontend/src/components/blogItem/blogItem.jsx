@@ -1,14 +1,14 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaEye, FaHeart, FaRegHeart, FaResearchgate, FaSearchengin, FaShare, FaShareAlt } from 'react-icons/fa';
+import { FaEye } from 'react-icons/fa';
 
 import blogStyle from './blogItem.module.css'
 import { Button } from '../../ui';
 import { OverlayActive } from '../../context/mainContext';
 
-const BlogItem = ({ blog, isLikeHandler, setIsLike }) => {
+const BlogItem = ({ blog, setIsLike }) => {
     const { overlayChangeHandler } = useContext(OverlayActive)
-    const { id, title, description, image, isLike } = blog
+    const { id, title, description, image, publishedAt, isLike } = blog
 
     useEffect(() => {
         setIsLike(isLike);
@@ -32,15 +32,15 @@ const BlogItem = ({ blog, isLikeHandler, setIsLike }) => {
                 </h3>
                 <p className="text">{description}</p>
                 <p className='field'>
-                    <pre>05:35 PM</pre>
-                    <div className="option" style={{ padding: '0 5px' }}>
-                        {/* <span className="icon" onClick={() => { isLikeHandler(id) }}>
+                    <pre>{publishedAt}</pre>
+                    {/* <div className="option" style={{ padding: '0 5px' }}>
+                        <span className="icon" onClick={() => { isLikeHandler(id) }}>
                             {isLike ? <FaHeart color='crimson' /> : <FaRegHeart />}
-                        </span> */}
+                        </span>
                         <span className="icon">
                             <FaShareAlt style={{ marginRight: '5px' }} />
                         </span>
-                    </div>
+                    </div> */}
                 </p>
             </div>
         </div>
