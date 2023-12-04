@@ -1,20 +1,24 @@
 interface INavbarData {
     path: string,
-    label: string
+    label: string,
+    isHere: boolean
 }
 
 const NavbarData: INavbarData[] = [
     {
         path: '/',
-        label: 'home'
+        label: 'home',
+        isHere: false
     },
     {
         path: '/blogs',
-        label: 'blogs'
+        label: 'blogs',
+        isHere: false
     },
     {
         path: '/about',
-        label: 'about'
+        label: 'about',
+        isHere: false
     },
 ]
 

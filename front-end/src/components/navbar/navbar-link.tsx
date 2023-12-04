@@ -1,18 +1,20 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import { useParams, usePathname } from 'next/navigation'
+import React, { useEffect, useState } from 'react'
 
 type Props = {
     path: string,
-    label: string
+    label: string,
 }
 
 const NavbarLink = ({ label, path }: Props) => {
+    const pathName = usePathname()
+
     return (
-        <ul className='flex items-center justify-start'>
-            <li>
-                <Link href={path} className='inline-block py-4 px-6 text-[14px] uppercase hover:bg-[#222] hover:text-white transition-all'>{label}</Link>
-            </li>
-        </ul>
+        <li>
+            <Link href={path} className={`inline-block py-4 px-6 text-[14px] uppercase hover:bg-[#222] hover:text-white transition-all ${pathName === path ? 'bg-[#222] text-white' : ''}`}>{label}</Link>
+        </li>
     )
 }
 
