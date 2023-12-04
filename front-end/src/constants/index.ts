@@ -1,0 +1,1 @@
+export { default as NavbarData } from './navbar-link-data'
