@@ -1,6 +1,0 @@
-export { default as Home } from './home/home'
-export { default as Blogs } from './blogs/blogs'
-export { default as Templates } from './templates/templates'
-export { default as BlogDetail } from './blogDetails/blogDetail'
-export { default as SignIn } from './sign-in/signIn'
-export { default as Admin } from './admin/admin'
