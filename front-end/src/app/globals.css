@@ -43,6 +43,6 @@ body {
 }
 
 ::selection {
-  background: #060c42;
+  background: rgb(69, 74, 141);
   color: #fff;
 }
