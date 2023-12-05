@@ -7,7 +7,7 @@ type Props = {}
 const Hero = (props: Props) => {
   return (
     <div className='flex items-center justify-center gap-0 py-[6.4rem]'>
-        <div className='w-[40%] p-3 '>
+        <div className='w-[40%] p-4 '>
             <h1 className='text-5xl font-bold hero__subtitle_1'>Assalomu alaykum</h1>
             <h3 className='text-2xl font-bold my-2 '><span className='hero__subtitle_1'>JA Blog</span> saytiga xush kelibsiz.</h3>
             <p className="text-lg text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit impedit necessitatibus sunt cupiditate assumenda soluta possimus officiis aliquam quo dolores.</p>
