@@ -8,6 +8,17 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background:#ffffff91;
+  border-radius: 15px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -29,6 +40,8 @@ body {
 .hero__subtitle_1 {
   position: relative;
   display: inline-block;
+  color: #0000005e;
+  text-shadow: 0 0 3px rgba(3, 29, 59, 0.726);
 }
 
 .hero__subtitle_1::before {
@@ -39,10 +52,27 @@ body {
   width: 100%;
   height: 15px;
   background-color: rgba(3, 29, 59, 0.726);
+  filter: blur(8px);
   z-index: -1;
 }
 
 ::selection {
   background: rgb(69, 74, 141);
   color: #fff;
+}
+
+nav {
+  position: relative;
+}
+
+nav::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  filter: blur(30px);
+  z-index: -1;
 }

@@ -5,12 +5,12 @@ type Props = {}
 
 export default function Home({}: Props) {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-[200vh]'>
       <div className='max-w-[1440px] mx-auto'>
         <div className="container mx-auto">
           <Hero />
           <Spronsors />
-          {/* <Autoplay /> */}
+          {/* <Autoplay /> */}  
         </div>
       </div>
     </div>

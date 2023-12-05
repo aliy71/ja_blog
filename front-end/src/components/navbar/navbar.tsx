@@ -17,7 +17,7 @@ interface INavbarData {
 const Navbar = (props: Props) => {
     return (
         <>
-            <nav className='max-w-auto border-b-[1px] border-gray-300 bg-white/[.4] sticky top-0'>
+            <nav className='max-w-auto border-b-[1px] border-gray-300 bg-white/[.8] sticky top-0 z-10 '>
                 <div className='max-w-[1440px] mx-auto pt-4'>
                     <div className='flex justify-between items-center px-8'>
                         <div className="logo w-[20%] text-xl font-medium">Blogs</div>
