@@ -27,6 +27,7 @@ const Navbar = (props: Props) => {
                                     <NavbarLink 
                                         label={label} 
                                         path={path}  
+                                        key={label}
                                         />
                                 ))
                             }

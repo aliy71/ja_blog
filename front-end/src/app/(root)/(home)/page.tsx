@@ -1,4 +1,4 @@
-import { Hero } from '@/components'
+import { Hero, Spronsors } from '@/components'
 import React from 'react'
 
 type Props = {}
@@ -9,6 +9,7 @@ export default function Home({}: Props) {
       <div className='max-w-[1440px] mx-auto'>
         <div className="container mx-auto">
           <Hero />
+          <Spronsors />
           {/* <Autoplay /> */}
         </div>
       </div>
