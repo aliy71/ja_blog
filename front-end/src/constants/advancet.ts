@@ -3,7 +3,7 @@
 
 // interface IAdvencet {
 //     label: string,
-//     icon: any
+//     icon: React.ReactNode
 // }
 
 // const advancet: IAdvencet[] = [
